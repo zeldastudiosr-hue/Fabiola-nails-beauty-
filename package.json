@@ -1,0 +1,10 @@
+{
+  "name": "fabiola-nails-beauty",
+  "private": true,
+  "description": "Sito web di Fabiola's Nails & Beauty, centro estetico e nail art in Via Alba 46, Roma.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 8080 -d dist"
+  }
+}
