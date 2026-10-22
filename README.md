@@ -32,4 +32,6 @@ Il sito **non è ancora pubblicato**. Mancano la P.IVA e il dominio (vedi `docs/
 
 ### Anteprima su GitHub Pages
 
-A ogni modifica su `main`, il workflow `.github/workflows/anteprima.yml` rigenera il sito e lo pubblica come anteprima su GitHub Pages (pagine con `noindex`, non compaiono su Google). Serve una sola impostazione: in GitHub, Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+L'anteprima è su https://zeldastudiosr-hue.github.io/Fabiola-nails-beauty-/ ed è pubblicata dal ramo `gh-pages` (Settings → Pages → Deploy from a branch → `gh-pages`, cartella `/ (root)`). Le pagine hanno `noindex`: non compaiono su Google.
+
+Per aggiornarla dopo una modifica: `npm run anteprima` (genera `dist/` per la sottocartella del progetto), poi copia il contenuto di `dist/` nel ramo `gh-pages` insieme a un file vuoto `.nojekyll` e caricalo.

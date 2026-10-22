@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "preview": "python3 -m http.server 8080 -d dist"
+    "preview": "python3 -m http.server 8080 -d dist",
+    "anteprima": "ANTEPRIMA=1 BASE_PATH=/Fabiola-nails-beauty-/ node scripts/build.mjs"
   }
 }
