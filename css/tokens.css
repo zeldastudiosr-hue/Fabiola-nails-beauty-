@@ -1,0 +1,53 @@
+/* Design token di Fabiola's Nails & Beauty: colori presi dal locale (poltrone rosa, parete viola, glicine, neon). */
+@font-face { font-family: "Jost"; font-weight: 400; font-style: normal; font-display: swap; src: url("../assets/fonts/jost-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-weight: 500; font-style: normal; font-display: swap; src: url("../assets/fonts/jost-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 400; font-style: normal; font-display: swap; src: url("../assets/fonts/playfair-display-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 400; font-style: italic; font-display: swap; src: url("../assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 500; font-style: normal; font-display: swap; src: url("../assets/fonts/playfair-display-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Parisienne"; font-weight: 400; font-style: normal; font-display: swap; src: url("../assets/fonts/parisienne-latin-400-normal.woff2") format("woff2"); }
+
+:root {
+  /* Colori */
+  --paper: #FFF8F7;        /* bianco latte rosato, fondo */
+  --white: #FFFFFF;
+  --blush: #FBEBEE;        /* rosa cipria chiaro, sezioni alternate */
+  --blush-deep: #F3D3DC;   /* rosa delle poltrone, superfici e bordi */
+  --ink: #2B1D24;          /* prugna scurissimo, testo */
+  --ink-soft: #6A5560;     /* testo secondario */
+  --rose: #A3355F;         /* rosa intenso: pulsanti e link */
+  --rose-dark: #84264A;    /* passaggio del mouse */
+  --lilac: #6E3F87;        /* glicine e parete viola: occhielli */
+  --gold: #C2A06C;         /* oro tenue, solo filetti decorativi */
+  --rule: #EBCFD6;         /* filetti */
+  --neon: #E2449E;         /* fucsia dell'insegna, solo accenti */
+  --ok: #2E6B45;
+  --closed: #9A3B2F;
+
+  /* Caratteri */
+  --font-display: "Playfair Display", "Didot", "Georgia", serif;
+  --font-body: "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-script: "Parisienne", "Snell Roundhand", cursive;
+
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.1rem, 1rem + 0.45vw, 1.35rem);
+  --fs-label: 0.78rem;
+  --fs-h1: clamp(2.1rem, 1.5rem + 2.6vw, 3.6rem);
+  --fs-h2: clamp(1.8rem, 1.35rem + 1.9vw, 2.8rem);
+  --fs-h3: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --tracking-label: 0.16em;
+
+  /* Spazi e forme */
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --section-y: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --container: 72rem;
+  --radius: 1.25rem;
+  --radius-small: 0.6rem;
+  --header-h: 4.25rem;
+  --shadow: 0 1.5rem 3rem -1.5rem rgb(132 38 74 / 0.28);
+
+  /* Movimento: lento e morbido, come un petalo che si posa */
+  --ease: cubic-bezier(.22, .8, .25, 1);
+  --dur-fast: 200ms;
+  --dur: 600ms;
+  --dur-slow: 900ms;
+}
