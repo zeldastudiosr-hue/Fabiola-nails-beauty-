@@ -14,6 +14,9 @@ const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 const anno = new Date().getFullYear();
+// Anteprima su GitHub Pages: il sito sta in una sottocartella (BASE_PATH) e non va indicizzato (ANTEPRIMA=1)
+const BASE = process.env.BASE_PATH || "/";
+const ANTEPRIMA = process.env.ANTEPRIMA === "1";
 const indirizzoCompleto = `${b.indirizzo}, ${b.cap} ${b.citta}`;
 const ext = `rel="noopener" target="_blank"`;
 
@@ -49,7 +52,7 @@ ${base ? `<base href="${base}">\n` : ""}<meta name="viewport" content="width=dev
 <title>${esc(title)}</title>
 <script>document.documentElement.classList.add("js")</script>
 <meta name="description" content="${esc(description)}">
-${b.sitoUrl ? `<link rel="canonical" href="${esc(b.sitoUrl + path)}">\n<meta property="og:url" content="${esc(b.sitoUrl + path)}">\n<meta property="og:image" content="${esc(b.sitoUrl)}/assets/img/insegna-1024.jpg">\n` : ""}<meta property="og:type" content="website">
+${ANTEPRIMA && !extra.includes("noindex") ? `<meta name="robots" content="noindex">\n` : ""}${b.sitoUrl ? `<link rel="canonical" href="${esc(b.sitoUrl + path)}">\n<meta property="og:url" content="${esc(b.sitoUrl + path)}">\n<meta property="og:image" content="${esc(b.sitoUrl)}/assets/img/insegna-1024.jpg">\n` : ""}<meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -358,7 +361,7 @@ ${orariHtml}
   </section>
 
   <dialog class="lightbox" data-lightbox-dialog aria-label="Foto ingrandita">
-    <img src="" alt="" data-lightbox-img>
+    <img alt="" data-lightbox-img>
     <button class="lightbox-close" type="button" data-lightbox-close><span aria-hidden="true">×</span><span class="sr-only">Chiudi</span></button>
     <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev><span aria-hidden="true">‹</span><span class="sr-only">Foto precedente</span></button>
     <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next><span aria-hidden="true">›</span><span class="sr-only">Foto successiva</span></button>
@@ -418,7 +421,7 @@ pagina({
   description: `La pagina che cerchi non esiste. Torna alla home di ${b.nome}.`,
   path: "/404.html",
   // La 404 può comparire su indirizzi annidati: i percorsi devono partire dalla radice
-  base: "/",
+  base: BASE,
   extra: `<meta name="robots" content="noindex">`,
   main: `  <section class="section page-top">
     <div class="container narrow center">

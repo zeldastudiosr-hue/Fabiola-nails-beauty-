@@ -29,3 +29,7 @@ La cartella `dist/` è generata e non va nel repository.
 ## Pubblicazione
 
 Il sito **non è ancora pubblicato**. Mancano la P.IVA e il dominio (vedi `docs/01-scoperta-e-stato.md`). `netlify.toml` è pronto per quando la pubblicazione sarà autorizzata.
+
+### Anteprima su GitHub Pages
+
+A ogni modifica su `main`, il workflow `.github/workflows/anteprima.yml` rigenera il sito e lo pubblica come anteprima su GitHub Pages (pagine con `noindex`, non compaiono su Google). Serve una sola impostazione: in GitHub, Settings → Pages → Build and deployment → Source: **GitHub Actions**.
