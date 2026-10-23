@@ -14,7 +14,7 @@ Sito statico di Fabiola's Nails & Beauty, centro estetico e nail art in Via Alba
 | `js/main.js` | Interazioni: video d'apertura, listino a schede, galleria, "aperto ora", pulsante fisso su mobile |
 | `assets/` | Caratteri (licenza SIL OFL), foto e video pronti per il web |
 | `media/sorgenti/` | Foto e video di partenza (già senza persone): non vanno online |
-| `docs/` | Scoperta, decisioni e stato del progetto |
+| `docs/` | Schermate dell'anteprima |
 
 ## Modificare prezzi, orari o contatti
 
@@ -28,7 +28,7 @@ La cartella `dist/` è generata e non va nel repository.
 
 ## Pubblicazione
 
-Il sito **non è ancora pubblicato**. Mancano la P.IVA e il dominio (vedi `docs/01-scoperta-e-stato.md`). `netlify.toml` è pronto per quando la pubblicazione sarà autorizzata.
+Il sito **non è ancora pubblicato**. Mancano la P.IVA e il dominio. `netlify.toml` è pronto per quando la pubblicazione sarà autorizzata.
 
 ### Anteprima su GitHub Pages
 
